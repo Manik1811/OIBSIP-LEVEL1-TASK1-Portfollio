@@ -1,0 +1,347 @@
+/* Basic resets and styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark Theme Styles */
+.dark-theme {
+    background-color: #10182b; /* Dark background */
+    color: #f1f1f1; /* Light text color */
+}
+
+.dark-theme header {
+    background: linear-gradient(135deg, #3114f1, #1c1f4d); /* Darker gradient for header */
+}
+
+.dark-theme .contact-card {
+    background: #1a1924; /* Dark background for contact cards */
+}
+
+.dark-theme p {
+    color: #fcf9f9;
+}
+
+.dark-theme .project-card {
+    background: #1a1924; /* Dark background for contact cards */
+}
+
+.dark-theme section {
+    background: #252525; /* Dark background for sections */
+}
+
+.dark-theme footer {
+    background: #5c4dc5; /* Darker color for footer */
+}
+
+#theme-toggle {
+    background-color: #273650; /* Blue background for the button */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1em; /* Slightly larger font size */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    margin-top: 20px; /* Add some margin above */
+}
+
+#theme-toggle:hover {
+    background-color: #1a5fbf; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+#theme-toggle:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5); /* Soft shadow effect */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #fcf8f8; /* Soft background for elegance */
+    color: #333;
+}
+
+/* Hero Section */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background-size: 200% 200%;
+    animation: gradientAnimation 15s ease infinite; /* Gradient animation */
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Soft white overlay */
+    z-index: 0;
+}
+
+header .container {
+    position: relative;
+    z-index: 1; /* Ensure content is above the overlay */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease forwards; /* Ensure this line is added */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin: 20px 0;
+    animation: slideIn 1s ease forwards; /* Ensure this line is added */
+    border: 5px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+.intro {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+    text-align: justify;
+        
+    
+}
+
+.cta {
+    background: #4050ff; /* Vibrant pink for call to action */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    position: relative; /* Needed for the glow effect */
+    animation: fadeInUp 1s ease;
+}
+
+.cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cta:hover {
+    background: #e91e63; /* Darker pink on hover */
+    transform: scale(1.1) translateY(-2px); /* Slight grow and lift */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect on hover */
+    animation: bounce 0.3s; /* Bounce effect */
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+main {
+    padding: 20px;
+}
+
+.contact-info {
+    text-align: center;
+    margin: 50px 0; /* Space around the section */
+}
+
+.contact-info h2 {
+    font-size: 2rem; /* Larger font size for the heading */
+    margin-bottom: 20px;
+    color: #6a11cb; /* Match the theme color */
+}
+
+.contact-card {
+    background: #fff; /* White background for cards */
+    color: #333; /* Dark text color for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px auto; /* Center the cards */
+    max-width: 400px; /* Max width for cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
+}
+
+.contact-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.contact-card a {
+    color: #6a11cb; /* Link color matching the theme */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-card a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Section styling */
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start invisible */
+    transform: translateY(50px); /* Start position */
+    animation: fadeInUp 0.8s forwards; /* Smoother fade-in */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    margin-top: 0;
+    color: #2575fc; /* Professional blue for headers */
+    text-align: center;
+    margin: 50px 0; /* Space around the section */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Spacing between skill items */
+    
+}
+
+.skill {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple background for skill items */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 120px; /* Fixed width for skill cards */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+    width: 50px; /* Size of the skill icons */
+    height: auto;
+    margin-bottom: 10px; /* Space between icon and text */
+}
+h3{
+    color: #3114f1;
+    text-align: center;
+    margin: 50px 0; /* Space around the section */
+}
+h4{
+    color: #3114f1;
+    text-align: center;
+    margin: 50px 0; /* Space around the section */
+}
+
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    max-width: 300px; /* Limit the width of project cards */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: justify;
+}
+
+.profile-image{
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+.project-card:hover {
+    transform: scale(1.05); /* Zoom-in effect on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    position: relative;
+    overflow: hidden; /* Prevent overflow */
+    text-align: center;
+    padding: 20px 0;
+    background: #6a11cb; /* Darker color for footer */
+    color: #fff;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: wave 4s ease-in-out infinite; /* Wave animation */
+}
+
+@keyframes wave {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
+/* Add your media queries here for responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em; /* Smaller font size for smaller screens */
+    }
+
+    .contact-card {
+        width: 90%; /* Full width on smaller screens */
+    }
+
+    .skills-container, .project-list {
+        flex-direction: column; /* Stack skills and projects on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .skill, .project-card {
+        width: 80%; /* Full width for skills and projects */
+    }
+}
